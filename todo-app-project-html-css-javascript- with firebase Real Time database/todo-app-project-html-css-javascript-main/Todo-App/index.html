@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src= "https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src= "https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script>
+   const firebaseConfig = {
+        apiKey: "AIzaSyB3L7QRo2PfgxC50QjPqefRUfesTaiX5m8",
+        authDomain: "todo-app-17b23.firebaseapp.com",
+        projectId: "todo-app-17b23",
+        storageBucket: "todo-app-17b23.appspot.com",
+        messagingSenderId: "769529594041",
+        appId: "1:769529594041:web:8c16c4913483d5f0df5b68",
+        measurementId: "G-E5DK8JKXW9"
+     };
+        //initilize database
+      firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+<body>
+    <!-- <div class="search">
+        <input type="text" id="search-txt" placeholder="Enter the search item">
+        <button onclick="search()">Search item</button>
+    </div> -->
+    <div class="main">
+        <h1>Todo App</h1>
+        <input type="text" id="todo-item" placeholder="Enter the item" onblur="this.style.backgroundColor='yellow'" onfocus="this.style.backgroundColor='red' ">
+        
+        <button onclick="addTodolist()">Add item</button>
+        <button onclick="deleteAllitem()">Delete All Item</button>
+        <div>
+            <ol id="list">
+    
+            </ol>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
